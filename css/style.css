@@ -33,7 +33,7 @@ body {
     color: #ffffff;
     font-weight: 700;
 }
-@media(max-width: 480px) {
+@media(max-width: 768px) {
     .logo {
         height: 25px;
         width: 25px;
@@ -86,7 +86,7 @@ textarea {
     font-size: 2rem;
     font-family: Arial, Helvetica, sans-serif;
 }
-@media(max-width: 480px) {
+@media(max-width: 768px) {
     textarea {
         width: 90%;
         border-radius: 1rem;
