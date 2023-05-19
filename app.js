@@ -1,10 +1,11 @@
 let mensaje = document.querySelector(".contenido-revelado");
-
+let msj = document.querySelector(".contenido-encriptar");
 //BOTON COPIAR
 function copiarA() {
   let copiar = document.querySelector(".contenido-revelado");
   copiar.select();
   document.execCommand("copy");
+  msj.focus();
   swal.fire({
     icon: "info",
     iconColor: "blue",
@@ -17,7 +18,9 @@ function copiarA() {
       timerProgressBar: 'progreso'
       }
     });
+  msj.value = '';
 }
+
 //Crear funcion que capture lo escrito por el usuario.
 function obtenerTexto() {
   let textoRecibido = document.querySelector("#encriptar").value;
@@ -126,3 +129,13 @@ function desencriptar(encriptado) {
   }
   return desencriptado;
 }
+
+//Para dar "enter" y que se encripte
+var codificar = document.querySelector(".contenido-encriptar");
+codificar.addEventListener("keypress", function(event){
+  if(event.key === "Enter"){
+    obtenerTexto();
+    document.querySelector(".boton-codificar").click();
+    mensaje.focus();
+  }
+});
