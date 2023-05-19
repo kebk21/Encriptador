@@ -68,10 +68,20 @@ function encriptar(texto) {
     texto = texto.toLowerCase();
     const busqueda = {
       'a': 'ai',
+      'á': 'ai',
+      'à': 'ai',
       'e': 'enter',
+      'é': 'enter',
+      'è': 'enter',
       'i': 'imes',
+      'í': 'imes',
+      'ì': 'imes',
       'o': 'ober',
-      'u': 'ufat'
+      'ó': 'ober',
+      'ò': 'ober',
+      'u': 'ufat',
+      'ú': 'ufat',
+      'ù': 'ufat'
     };
     let encriptado = '';
     let i;
@@ -115,4 +125,4 @@ function desencriptar(encriptado) {
     }
   }
   return desencriptado;
-} 
+}
