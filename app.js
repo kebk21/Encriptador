@@ -28,7 +28,7 @@ function obtenerTexto() {
       title: "Favor de ingresar un texto.",
       timer: 1500,
       timerProgressBar: true,
-      position: "top-center",
+      position: "center",
       showConfirmButton: false,
       customClass: {
         timerProgressBar: 'progreso'
@@ -50,7 +50,7 @@ function desencriptacion() {
       title: "Favor de ingresar un texto.",
       timer: 1500,
       timerProgressBar: true,
-      position: "top-center",
+      position: "center",
       showConfirmButton: false,
       customClass: {
         timerProgressBar: 'progreso'
