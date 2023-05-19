@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Pagina Web de Encriptación de Textos. ALURA Challenge ONE">
+    <link rel="preconnect" href="css/normalize.css" as="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="preconnect" href="css/style.css" as="styles">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">  
+    <title>Encriptador: Encriptando lo que desees</title>
+</head>
+<body class="degradado">
+    <header class="contenedor">
+        <a class="logo" href="index.html">a</a>
+    </header>
+    <main>
+        <div>
+            <section class="formulario contenido">
+                <h1 class="titulo">Encriptador de Textos</h1>
+                <textarea class="contenido-encriptar" id="encriptar" placeholder="Ingrese texto a encriptar"></textarea>
+                <div class="barra">
+                    <h3><svg class="warning" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256 32c14.2 0 27.3 7.5 34.5 19.8l216 368c7.3 12.4 7.3 27.7 .2 40.1S486.3 480 472 480H40c-14.3 0-27.6-7.7-34.7-20.1s-7-27.8 .2-40.1l216-368C228.7 39.5 241.8 32 256 32zm0 128c-13.3 0-24 10.7-24 24V296c0 13.3 10.7 24 24 24s24-10.7 24-24V184c0-13.3-10.7-24-24-24zm32 224a32 32 0 1 0 -64 0 32 32 0 1 0 64 0z"/></svg>Sólo letras minúsculas y sin acentos</h3>
+                </div>
+                <div class="boton">
+                    <button class="boton-codificar" onclick="obtenerTexto()">Encriptar</button>
+                    <button class="boton-decodificar" onclick="desencriptacion()">Desencriptar</button>
+                </div>
+                <textarea class="contenido-revelado" id="textoRevelado" placeholder="No hay texto disponible para encriptar o desencriptar" readonly></textarea>
+                <div class="boton-copiar" id="copiador">
+                    <button class="copiar" onclick="copiarA()">Copiar</button>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <div class="contenedor">
+            <p class="footer">Diseñado por Kebek Romero. Todos los derechos reservados
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-registered" width="12" height="12" viewBox="0 0 24 24" stroke-width="2" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <circle cx="12" cy="12" r="9" />
+                    <path d="M9 16v-8h4a2 2 0 0 1 0 4h-4m3 0l3 4" />
+                </svg>.
+            </p>
+            <p class="footer">
+                <a href="https://www.linkedin.com/in/kebek-romero-enriquez-biologist/"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-linkedin" width="16" height="16" viewBox="0 0 24 24" stroke-width="2" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <rect x="4" y="4" width="16" height="16" rx="2" />
+                    <line x1="8" y1="11" x2="8" y2="16" />
+                    <line x1="8" y1="8" x2="8" y2="8.01" />
+                    <line x1="12" y1="16" x2="12" y2="11" />
+                    <path d="M16 16v-3a2 2 0 0 0 -4 0" />
+                  </svg></a>
+            </p>
+        </div>
+    </footer>
+    <script src="/app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+</html>
