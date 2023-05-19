@@ -89,40 +89,7 @@ function encriptar(texto) {
 }
 
 //Función que ve la encriptación, mapea las letras encriptadas y devuelve texto original.
-
-//  function desencriptar(encriptado) {
-//      encriptado = encriptado.toLowerCase();
-//      const busqueda = {
-//          'ai': 'a',
-//          'enter': 'e',
-//          'imes': 'i',
-//          'ober': 'o',
-//          'ufat': 'u'
-//      }
-//      let desencriptado = '';
-//      let i = 0;
-//      let letra;
-//      while( i < encriptado.length) {
-//          letra = encriptado.substr(i);
-//      if(busqueda[letra]) {
-//        desencriptado += busqueda[letra];
-//        i += 5;
-//      }
-//      else {
-//        desencriptado += letra[0];
-//        i++;
-//      }
-//    }
-//    return desencriptado;
-//  }
 function desencriptar(encriptado) {
-  // const busqueda = {
-  //   'ai': 'a',
-  //   'enter': 'e',
-  //   'imes': 'i',
-  //   'ober': 'o',
-  //   'ufat': 'u'
-  // };
   let desencriptado = '';
   let i = 0;
   while (i < encriptado.length) {
