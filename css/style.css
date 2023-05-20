@@ -140,7 +140,7 @@ textarea {
     }
 }
 
-.boton-codificar, .boton-decodificar {
+.boton-codificar, .boton-decodificar, .boton-reiniciar {
     margin-top: 1rem;
     padding: 1rem 3rem;
     font-size: 2rem;
@@ -171,6 +171,10 @@ textarea {
 }
 .boton-decodificar:hover {
     background-color: rgb(230, 40, 40);
+    color: wheat;
+}
+.boton-reiniciar:hover {
+    background-color: rgb(211, 8, 194);
     color: wheat;
 }
 .contenido-revelado {

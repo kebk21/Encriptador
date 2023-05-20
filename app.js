@@ -3,6 +3,21 @@ let msj = document.querySelector(".contenido-encriptar");
 //BOTON COPIAR
 function copiarA() {
   let copiar = document.querySelector(".contenido-revelado");
+  if(mensaje.value == false) {
+    swal.fire({
+      icon: "error",
+      iconColor: "red",
+      title: "No hay contenido para copiar",
+      timer: 1500,
+      timerProgressBar: true,
+      position: "top-right",
+      showConfirmButton: false,
+      customClass: {
+        timerProgressBar: 'progreso'
+        }
+      });
+  }
+  else {
   copiar.select();
   document.execCommand("copy");
   msj.focus();
@@ -19,9 +34,19 @@ function copiarA() {
       }
     });
   msj.value = '';
+  mensaje.value = '';
+  mensaje.style.backgroundImage = "url('img/Muneco.png')";
+  }
 }
 
-//Crear funcion que capture lo escrito por el usuario.
+//Boton Reiniciar
+function reiniciar() {
+  msj.value = '';
+  mensaje.value = '';
+  mensaje.style.backgroundImage = "url('img/Muneco.png')";
+}
+
+//Crear funcion que capture lo escrito por el usuario. BOTON ENCRIPTAR
 function obtenerTexto() {
   let textoRecibido = document.querySelector("#encriptar").value;
   if(textoRecibido == false) {
@@ -44,6 +69,7 @@ function obtenerTexto() {
     mensaje.style.backgroundImage = "none";
   }
 }
+//BOTON DESENCRIPTAR
 function desencriptacion() {
   let textoRecibido = document.querySelector("#encriptar").value;
   if(textoRecibido == false) {
